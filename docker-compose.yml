@@ -1,8 +1,8 @@
 version: '2'
 
 services:
-  jma-receiver:
-    image:  ancolin/jma-receiver
+  jma-xml-downloader:
+    image:  ancolin/jma-xml-downloader
     environment:
     - FEED_DIR=/app/feed
     - DATA_DIR=/app/data

@@ -17,7 +17,7 @@ http://www.data.jma.go.jp/developer/index.html
 
 ## イメージのビルド
 以下のようなコマンドでビルドしてください。  
-`docker build -t ancolin/jma-receiver:latest ./`
+`docker build -t ancolin/jma-xml-downloader:latest ./`
 
 ## docker-compose.ymlの書き方
 環境変数が2種、計6つ用意されています。
@@ -39,10 +39,10 @@ Atomフィードと気象データの保存先を指定することができま�
 ## ダウンロードの実行
 `docker-compose run`で実行する使い捨て型で、常駐はしません。
 以下のようなコマンドで実行してください。  
-`docker-compose run --rm jma-receiver`
+`docker-compose run --rm jma-xml-downloader`
 
-もし長期フィードのデータを取得したいときは、引数に`longer`を指定して実行してください。
-`docker-compose run --rm jma-receiver longer`
+もし長期フィードのデータを取得したいときは、引数に`longer`を指定して実行してください。  
+`docker-compose run --rm jma-xml-downloader longer`
 
 ## Copyright and license
 Code copyright 2017 ancolin.
