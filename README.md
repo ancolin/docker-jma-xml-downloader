@@ -15,10 +15,6 @@ http://www.data.jma.go.jp/developer/index.html
 
 **バックアップ、圧縮、削除などはプログラム中では一切行いません。**
 
-## イメージのビルド
-以下のようなコマンドでビルドしてください。  
-`docker build -t ancolin/jma-xml-downloader:latest ./`
-
 ## docker-compose.ymlの書き方
 環境変数が2種、計6つ用意されています。
 
