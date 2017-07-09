@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  jma-receiver:
+    image:  ancolin/jma-receiver
+    environment:
+    - FEED_DIR=/app/feed
+    - DATA_DIR=/app/data
+
+    - DATA_TYPE_REGULAR=
+    - DATA_TYPE_EXTRA=
+    - DATA_TYPE_EQVOL=
+    - DATA_TYPE_OTHER=
