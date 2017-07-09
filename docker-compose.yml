@@ -3,6 +3,8 @@ version: '2'
 services:
   jma-xml-downloader:
     image:  ancolin/jma-xml-downloader
+    volumes:
+    - /tmp:/app
     environment:
     - FEED_DIR=/app/feed
     - DATA_DIR=/app/data
