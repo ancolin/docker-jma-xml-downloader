@@ -49,12 +49,9 @@ foreach ($feed_urls as $feed_url) {
         // check new data exists
         foreach ($feed->entry as $entry) {
             $data_url = $entry->link['href'];
-            $data_updated = array(
-                'date' => date('Ymd', strtotime($entry->updated)),
-                'time' => date('His', strtotime($entry->updated)),
-            );
-            $data_dir = $data_dir_base . '/' . $data_updated['date'];
-            $data_name = $data_dir . '/' . $data_updated['time'] . '_'. basename($data_url);
+            $data_updated = date('Y/m/d', strtotime($entry->updated));
+            $data_dir = $data_dir_base . '/' . $data_updated;
+            $data_name = $data_dir . '/' . basename($data_url);
 
             // get new data
             if (!file_exists($data_name)) {
